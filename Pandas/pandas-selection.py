@@ -28,3 +28,5 @@ print(wine_in_country)
 
 wines_in_country['points'] = 0
 print(wines_in_country)
+
+wine_in_country['points']=range(0, len(wine_in_country))

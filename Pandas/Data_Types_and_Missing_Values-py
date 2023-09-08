@@ -1,0 +1,11 @@
+# Your code here
+dtype = reviews.points.dtype
+
+point_strings = reviews.points.astype(str)
+
+missing_price_reviews = reviews[reviews.price.isnull()]
+n_missing_prices = len(missing_price_reviews)
+
+reviews_per_region = reviews.region_1.fillna('Unknown').value_counts().sort_values(ascending=False)
+# Check your answer
+

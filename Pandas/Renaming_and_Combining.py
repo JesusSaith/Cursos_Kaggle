@@ -1,4 +1,11 @@
-# Your code here
+
+import pandas as pd
+
+reviews = pd.read_csv("inemag-data-130k-v2.csv", index_col=0)
+
+from learntools.core import binder; binder.bind(globals())
+from learntools.pandas.renaming_and_combining import *
+
 renamed = reviews.rename(columns=dict(region_1='region', region_2='locale'))
 
 reindexed = reviews.rename_axis('wines', axis='rows')
